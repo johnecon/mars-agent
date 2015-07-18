@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE conf SYSTEM "helpers/2013/config.dtd">
+
+<conf>
+	&sim-server;
+	<match>
+		&testsim3;
+		&testsim2;
+	</match>
+	
+	<accounts>
+		&actionclassmap;
+		
+		&teamUFSC;
+		<!--&teamLTI-USP;-->
+		&teamTUB;
+		&teamGOAL-DTU;
+		&teamPGIM;
+		&teamAiWXX;
+	</accounts>
+</conf>
+

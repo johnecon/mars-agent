@@ -1,0 +1,27 @@
+<agents>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="red">
+		<configuration roleName="Repairer"/>
+	</agent>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="red">
+		<configuration roleName="Saboteur"/>
+	</agent>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="red">
+		<configuration roleName="Explorer"/>
+	</agent>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="red">
+		<configuration roleName="Repairer"/>
+	</agent>
+
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="blue">
+		<configuration roleName="Repairer"/>
+	</agent>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="blue">
+		<configuration roleName="Saboteur"/>
+	</agent>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="blue">
+		<configuration roleName="Explorer"/>
+	</agent>
+	<agent agentclass="massim.competition2013.GraphSimulationAgent" agentcreationclass="massim.competition2013.GraphSimulationAgentParameter" team="blue">
+		<configuration roleName="Repairer"/>
+	</agent>
+</agents>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE conf SYSTEM "helpers/02285/config-debug.dtd">
+
+<conf>
+	&sim-server;
+	<match>
+		&simulation1debug1;
+	</match>
+
+	<accounts>
+		&actionclassmap;
+
+		&teamA;
+		&teamB;
+	</accounts>
+</conf>
+

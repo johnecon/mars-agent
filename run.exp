@@ -1,0 +1,31 @@
+#!/usr/bin/env expect -f
+set timeout -1
+
+# start server
+set HOSTNAME [exec hostname -f]
+set PACKAGE "massim-2013-1.4/massim/target/agentcontest-2013-1.4.jar"
+set CONF "massim-2013-1.4/massim/scripts/conf/02285.xml"
+spawn java -ea -Dcom.sun.management.jmxremote -Xss2000k -Xmx600M -DentityExpansionLimit=1000000 -DelementAttributeLimit=1000000 -Djava.rmi.server.hostname=$HOSTNAME -jar $PACKAGE --conf $CONF
+expect "Please press ENTER to start the tournament."
+
+# start monitor
+set RMIHOST "localhost"
+set RMIPORT "1099"
+exec java -Xss20000k -cp $PACKAGE massim.competition2013.monitor.GraphMonitor -rmihost $RMIHOST -rmiport $RMIPORT > /dev/null &
+
+# start agents
+exec ant -buildfile marsagent/build.xml run &
+exec ant -buildfile MAPC-UFSCTeam2013/build.xml runB  > /dev/null &
+
+# wait until all agents are connected
+for {set i 0} {$i < 2} {incr i} {
+  expect {
+    "got authentication: username=a28" continue
+    "got authentication: username=b28" continue
+  }
+}
+
+# start simulation
+send "\n"
+
+expect eof
